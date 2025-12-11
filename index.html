@@ -564,6 +564,9 @@
                             <span>1天</span>
                             <span>5天</span>
                             <span>10天</span>
+                            <span>15天</span>
+                            <span>20天</span>
+                            <span>25天</span>
                         </div>
                     </div>
                     
@@ -592,7 +595,7 @@
                 
                 <!-- 版本資訊 -->
                 <div class="text-center text-[10px] text-slate-400 font-bold mt-8">
-                    Tokyo eMenu v1.2 <br>
+                    Sapporo v1.0 <br>
                 </div>
             </div>
 
@@ -601,7 +604,7 @@
     </div>
 
     <!-- 底部導航欄 (移出 scroll-container, 確保絕對獨立置頂) -->
-    <div class="bottom-nav liquid-glass rounded-full backdrop-blur-xl shadow-[0_10px_40px_-10px_rgba(0,0,0,0.3)] border border-slate-200/50 rounded-full">
+    <div class="bottom-nav liquid-glass rounded-full backdrop-blur-xl shadow-[0_10px_40px_-10px_rgba(0,-3,10,0.3)] border border-slate-200/50 rounded-full">
          <div class="flex justify-between items-center px-1">
             <button @click="switchTab('schedule')" class="flex-1 flex flex-col items-center py-3.5 transition-all active:scale-95" :class="currentTab === 'schedule' ? 'text-[#5076a8]' : 'text-slate-400'">
                 <i class="fas fa-route text-xl mb-0.5"></i>
@@ -1120,6 +1123,7 @@
 </script>
 </body>
 </html>
+
 
 
 
