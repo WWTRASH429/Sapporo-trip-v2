@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Tokyo Trip eMenu</title>
+    <title>Sapporo Christmas Trip</title>
     
     <!-- Vue.js 3 -->
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
@@ -34,7 +34,7 @@
         .app-bg {
             position: fixed;
             top: 0; left: 0; right: 0; bottom: 0;
-            background-image: url('https://images.unsplash.com/photo-1490806843957-31f4c9a91c65?q=80&w=2070&auto=format&fit=crop');
+            background-image: url('https://i0.wp.com/mynihonblog.com/wp-content/uploads/2023/03/dsc_1946.jpg?fit=1200%2C800&ssl=1');
             background-size: cover;
             background-position: center center;
             z-index: -2;
@@ -44,7 +44,7 @@
         /* 2. 中間層：毛玻璃遮罩 (獨立出來，不再包裹內容) */
         .app-blur-layer {
             position: fixed;
-            top: 0; left: 0; right: 0; bottom: 0;
+            top: 0; left: 2; right: 0; bottom: 0;
             background-color: rgba(255, 255, 255, 0.25); 
             backdrop-filter: blur(4px); 
             z-index: -1;
@@ -220,7 +220,7 @@
                     :class="selectedDate === 'todo' ? 'bg-orange-50 border-orange-200 text-orange-500 shadow-md scale-105' : 'bg-white/80 border-slate-200 text-slate-400'"
                 >
                     <i class="fas fa-clipboard-list text-xl mb-1"></i>
-                    <span class="text-[11px] font-bold">行前</span>
+                    <span class="text-[11px] font-bold">行程</span>
                 </div>
 
                 <div v-for="(day, index) in tripDates" :key="index" @click="selectDate(day.date)"
@@ -278,7 +278,7 @@
                     </div>
                     <div class="text-right">
                         <div class="text-xs font-bold bg-sky-100 text-sky-600 px-2 py-1 rounded-full mb-1">
-                            <i class="fas fa-map-marker-alt mr-1"></i>東京
+                            <i class="fas fa-map-marker-alt mr-1"></i>札幌
                         </div>
                     </div>
                 </div>
@@ -1120,6 +1120,7 @@
 </script>
 </body>
 </html>
+
 
 
 
