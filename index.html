@@ -414,17 +414,17 @@
                         </div>
                         <div class="text-center border-r border-white/20">
                             <div class="flex items-center justify-center gap-1 text-blue-200 mb-1">
-                                <i class="fab fa-alipay text-xs"></i> <span class="text-[10px] font-bold">AlipayHK</span>
+                                <i class="fab fa-alipay text-xs"></i> <span class="text-[10px] font-bold">Ariel</span>
                             </div>
-                            <div class="font-black text-lg">$ {{ totalAlipayHKD || 0 }}</div>
-                            <div class="text-[10px] opacity-70">¥{{ totalAlipayJPY || 0 }}</div>
+                            <div class="font-black text-lg">$ {{ totalArielHKD || 0 }}</div>
+                            <div class="text-[10px] opacity-70">¥{{ totalArielJPY || 0 }}</div>
                         </div>
                       <div class="text-center border-r border-white/20">
                             <div class="flex items-center justify-center gap-1 text-red-200 mb-1">
-                                <i class="fas fa-qrcode text-xs"></i> <span class="text-[10px] font-bold">PayPay</span>
+                                <i class="fas fa-qrcode text-xs"></i> <span class="text-[10px] font-bold">Wilken</span>
                             </div>
-                            <div class="font-black text-lg">$ {{ totalPayPayHKD || 0 }}</div>
-                            <div class="text-[10px] opacity-70">¥{{ totalPayPayJPY || 0 }}</div>
+                            <div class="font-black text-lg">$ {{ totalWilkenHKD || 0 }}</div>
+                            <div class="text-[10px] opacity-70">¥{{ totalWilkenJPY || 0 }}</div>
                         </div>
                     </div>
                 </div>
@@ -440,8 +440,8 @@
                             <button @click="expenseFilter = 'all'" class="px-3 py-1.5 text-xs font-bold rounded-lg transition-all whitespace-nowrap" :class="expenseFilter === 'all' ? 'bg-white shadow text-[#5076a8]' : 'text-slate-500'">全部</button>
                             <button @click="expenseFilter = 'cash'" class="px-3 py-1.5 text-xs font-bold rounded-lg transition-all whitespace-nowrap" :class="expenseFilter === 'cash' ? 'bg-white shadow text-green-600' : 'text-slate-500'">現金</button>
                             <button @click="expenseFilter = 'card'" class="px-3 py-1.5 text-xs font-bold rounded-lg transition-all whitespace-nowrap" :class="expenseFilter === 'card' ? 'bg-white shadow text-purple-600' : 'text-slate-500'">信用卡</button>
-                            <button @click="expenseFilter = 'alipay'" class="px-3 py-1.5 text-xs font-bold rounded-lg transition-all whitespace-nowrap" :class="expenseFilter === 'alipay' ? 'bg-white shadow text-blue-600' : 'text-slate-500'">AlipayHK</button>
-                            <button @click="expenseFilter = 'paypay'" class="px-3 py-1.5 text-xs font-bold rounded-lg transition-all whitespace-nowrap" :class="expenseFilter === 'paypay' ? 'bg-white shadow text-red-600' : 'text-slate-500'">PayPay</button>
+                            <button @click="expenseFilter = 'alipay'" class="px-3 py-1.5 text-xs font-bold rounded-lg transition-all whitespace-nowrap" :class="expenseFilter === 'ariel' ? 'bg-white shadow text-blue-600' : 'text-slate-500'">Ariel</button>
+                            <button @click="expenseFilter = 'paypay'" class="px-3 py-1.5 text-xs font-bold rounded-lg transition-all whitespace-nowrap" :class="expenseFilter === 'wilken' ? 'bg-white shadow text-red-600' : 'text-slate-500'">Wilken</button>
                         </div>
 
                     </div>
@@ -453,13 +453,13 @@
                                      :class="{
                                         'bg-green-100 text-green-500': exp.paymentMethod === 'cash',
                                         'bg-purple-100 text-purple-500': exp.paymentMethod === 'card',
-                                        'bg-blue-100 text-blue-500': exp.paymentMethod === 'alipay',
-                                        'bg-red-100 text-red-500': exp.paymentMethod === 'paypay'
+                                        'bg-blue-100 text-blue-500': exp.paymentMethod === 'ariel',
+                                        'bg-red-100 text-red-500': exp.paymentMethod === 'wilken'
                                      }">
                                     <i v-if="exp.paymentMethod === 'cash'" class="fas fa-money-bill-wave"></i>
                                     <i v-else-if="exp.paymentMethod === 'card'" class="fas fa-credit-card"></i>
-                                    <i v-else-if="exp.paymentMethod === 'alipay'" class="fab fa-alipay"></i>
-                                    <i v-else class="fas fa-qrcode"></i>
+                                    <i v-else-if="exp.paymentMethod === 'ariel'" class="fab fa-ariel"></i>
+                                    <i v-else class="fas fa-wilken"></i>
                                 </div>
                                 <div>
                                     <p class="font-bold text-slate-800">{{ exp.item }}</p>
@@ -1120,6 +1120,7 @@
 </script>
 </body>
 </html>
+
 
 
 
